@@ -10,6 +10,7 @@ namespace WebAPI.App_Start
 
         public static void AddScope(IServiceCollection services)
         {
+            // Global context
             services.AddScoped<IWarPlannerContext, WarPlannerContext>();
         }
     }
