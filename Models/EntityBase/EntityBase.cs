@@ -6,9 +6,9 @@
         |*                             PROPERTIES                            *|
         \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-        public DateTimeOffset Created { get; set; }
+        public DateTimeOffset CreatedAt { get; set; }
 
-        public DateTimeOffset Updated { get; set; }
+        public DateTimeOffset UpdatedAt { get; set; }
 
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
         |*                           PUBLIC METHODS                          *|

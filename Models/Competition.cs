@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Models
 {
     [PrimaryKey(nameof(GuildId), nameof(CategoryId))]
-    public class Competition
+    public class Competition : EntityBase.EntityBase
     {
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
         |*                             PROPERTIES                            *|

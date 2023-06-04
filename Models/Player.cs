@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Models
 {
     [PrimaryKey(nameof(GuildId), nameof(Tag))]
-    public class Player
+    public class Player : EntityBase.EntityBase
     {
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
         |*                             PROPERTIES                            *|

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Models
 {
     [PrimaryKey(nameof(RoleId), nameof(Type))]
-    public class Role
+    public class Role : EntityBase.EntityBase
     {
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
         |*                             PROPERTIES                            *|

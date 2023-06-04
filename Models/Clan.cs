@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Models
 {
     [PrimaryKey(nameof(GuildId), nameof(Tag))]
-    public class Clan
+    public class Clan : EntityBase.EntityBase
     {
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
         |*                             PROPERTIES                            *|

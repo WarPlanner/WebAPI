@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Models
 {
     [PrimaryKey(nameof(DiscordId), nameof(ClanTag), nameof(WarDateStart), nameof(AttackOrder))]
-    public class PlayerStatistic
+    public class PlayerStatistic : EntityBase.EntityBase
     {
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
         |*                             PROPERTIES                            *|

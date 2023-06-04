@@ -3,7 +3,7 @@
 namespace Models
 {
     [PrimaryKey(nameof(DateStart), nameof(ClanTag))]
-    public class WarStatistic
+    public class WarStatistic : EntityBase.EntityBase
     {
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
         |*                             PROPERTIES                            *|
