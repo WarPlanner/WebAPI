@@ -15,7 +15,6 @@ namespace WebAPI.App_Start
 
             if (env.IsDevelopment()) optionsBuilder.UseSqlServer(configuration.GetConnectionString("DevConnection"));
             else if (env.IsProduction()) optionsBuilder.UseSqlServer(configuration.GetConnectionString("ProdConnection"));
-            else if (env.IsStaging()) optionsBuilder.UseInMemoryDatabase("GithubAction");
             else throw new Exception($"Environment '{env.EnvironmentName}' is unknown");
 
             WarPlannerContext context = new(optionsBuilder.Options);
@@ -26,7 +25,6 @@ namespace WebAPI.App_Start
             {
                 if (env.IsDevelopment()) options.UseSqlServer(configuration.GetConnectionString("DevConnection"));
                 else if (env.IsProduction()) options.UseSqlServer(configuration.GetConnectionString("ProdConnection"));
-                else if (env.IsStaging()) optionsBuilder.UseInMemoryDatabase("GithubAction");
             });
         }
     }

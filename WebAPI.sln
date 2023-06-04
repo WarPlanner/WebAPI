@@ -5,21 +5,21 @@ VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{0E299852-6C51-4977-9E64-81D5BDA38CE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commons", "Commons\Commons.csproj", "{61C8F3F1-2A22-4D7F-BDB8-5E37B15E8903}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Commons", "Commons\Commons.csproj", "{61C8F3F1-2A22-4D7F-BDB8-5E37B15E8903}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{F2C99E9B-9981-4FC2-B79B-69F8ADF730D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Interfaces\Interfaces.csproj", "{F2C99E9B-9981-4FC2-B79B-69F8ADF730D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maps", "Maps\Maps.csproj", "{34CE85CC-CAB0-4AD0-88D8-3455872083AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Maps", "Maps\Maps.csproj", "{34CE85CC-CAB0-4AD0-88D8-3455872083AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{91579171-33B5-49AE-AFA8-3E906D87DF68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{91579171-33B5-49AE-AFA8-3E906D87DF68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{E46E6191-7A43-487F-B1DA-970BB24028AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositories", "Repositories\Repositories.csproj", "{E46E6191-7A43-487F-B1DA-970BB24028AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{BB7199A9-B7B4-482D-B18B-7B18C90EA5C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{BB7199A9-B7B4-482D-B18B-7B18C90EA5C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModels", "ViewModels\ViewModels.csproj", "{33603B2C-F6E3-4EE1-AD25-4DF863624D85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewModels", "ViewModels\ViewModels.csproj", "{33603B2C-F6E3-4EE1-AD25-4DF863624D85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{D56B3382-0527-4C6D-AF72-29522E2964B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{08F280E3-A52D-4750-9A54-92297617A3C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,10 +59,10 @@ Global
 		{33603B2C-F6E3-4EE1-AD25-4DF863624D85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33603B2C-F6E3-4EE1-AD25-4DF863624D85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33603B2C-F6E3-4EE1-AD25-4DF863624D85}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D56B3382-0527-4C6D-AF72-29522E2964B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D56B3382-0527-4C6D-AF72-29522E2964B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D56B3382-0527-4C6D-AF72-29522E2964B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D56B3382-0527-4C6D-AF72-29522E2964B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08F280E3-A52D-4750-9A54-92297617A3C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08F280E3-A52D-4750-9A54-92297617A3C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08F280E3-A52D-4750-9A54-92297617A3C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08F280E3-A52D-4750-9A54-92297617A3C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
