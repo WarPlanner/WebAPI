@@ -1,4 +1,10 @@
-﻿using Models.Context;
+﻿using Interfaces.Maps;
+using Interfaces.Repositories;
+using Interfaces.Services;
+using Maps;
+using Models.Context;
+using Repositories;
+using Services;
 
 namespace WebAPI.App_Start
 {
@@ -12,6 +18,11 @@ namespace WebAPI.App_Start
         {
             // Global context
             services.AddScoped<IWarPlannerContext, WarPlannerContext>();
+
+            // Calendar
+            services.AddScoped<ICalendarMap, CalendarMap>();
+            services.AddScoped<ICalendarService, CalendarService>();
+            services.AddScoped<ICalendarRepository, CalendarRepository>();
         }
     }
 }
