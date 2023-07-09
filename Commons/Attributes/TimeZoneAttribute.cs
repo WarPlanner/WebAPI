@@ -1,41 +1,33 @@
-﻿using System.Text.Json.Serialization;
-
-namespace ViewModels
+﻿namespace Commons.Attributes
 {
-    public class CalendarViewModel
+    [AttributeUsage(AttributeTargets.All)]
+    public class TimeZoneAttribute : Attribute
     {
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
         |*                               FIELDS                              *|
         \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-        private readonly decimal _guildId;
-        private string _id;
-        private decimal? _channelId;
-        private decimal? _messageId;
+        private readonly string displayName;
+        private readonly string zone;
 
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
         |*                             PROPERTIES                            *|
         \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-        [JsonIgnore]
-        public decimal GuildId { get => _guildId; }
+        public string DisplayName { get => displayName; }
 
-        public string Id { get => _id; set => _id = value; }
-
-        public decimal? ChannelId { get => _channelId; set => _channelId = value; }
-
-        public decimal? MessageId { get => _messageId; set => _messageId = value; }
+        public string Zone { get => zone; }
 
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
         |*                            CONSTRUCTORS                           *|
         \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-        public CalendarViewModel(decimal guildId, string id)
+        public TimeZoneAttribute(string displayName, string zone)
         {
             // Inputs
             {
-                _guildId = guildId;
-                _id = id;
+                this.displayName = displayName;
+                this.zone = zone;
             }
         }
     }

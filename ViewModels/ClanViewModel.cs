@@ -8,17 +8,17 @@ namespace ViewModels
         |*                               FIELDS                              *|
         \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-        private readonly decimal guildId;
-        private readonly string tag;
+        private readonly decimal _guildId;
+        private readonly string _tag;
 
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
         |*                             PROPERTIES                            *|
         \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
         [JsonIgnore]
-        public decimal GuildId { get => guildId; }
+        public decimal GuildId { get => _guildId; }
 
-        public string Tag { get => tag; }
+        public string Tag { get => _tag; }
 
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
         |*                            CONSTRUCTORS                           *|
@@ -28,8 +28,8 @@ namespace ViewModels
         {
             // Inputs
             {
-                this.guildId = guildId;
-                this.tag = tag;
+                _guildId = guildId;
+                _tag = tag;
             }
         }
     }

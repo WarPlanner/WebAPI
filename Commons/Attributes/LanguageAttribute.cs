@@ -1,42 +1,35 @@
-﻿using System.Text.Json.Serialization;
-
-namespace ViewModels
+﻿namespace Commons.Attributes
 {
-    public class CalendarViewModel
+    [AttributeUsage(AttributeTargets.All)]
+    public class LanguageAttribute : Attribute
     {
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
         |*                               FIELDS                              *|
         \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-        private readonly decimal _guildId;
-        private string _id;
-        private decimal? _channelId;
-        private decimal? _messageId;
+        private readonly string name;
+        private readonly string cultureInfo;
+        private readonly string emoji;
 
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
         |*                             PROPERTIES                            *|
         \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-        [JsonIgnore]
-        public decimal GuildId { get => _guildId; }
+        public string Name { get => name; }
 
-        public string Id { get => _id; set => _id = value; }
+        public string CultureInfo { get => cultureInfo; }
 
-        public decimal? ChannelId { get => _channelId; set => _channelId = value; }
-
-        public decimal? MessageId { get => _messageId; set => _messageId = value; }
+        public string Emoji { get => emoji; }
 
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
         |*                            CONSTRUCTORS                           *|
         \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-        public CalendarViewModel(decimal guildId, string id)
+        public LanguageAttribute(string name, string cultureInfo, string emoji)
         {
-            // Inputs
-            {
-                _guildId = guildId;
-                _id = id;
-            }
+            this.name = name;
+            this.cultureInfo = cultureInfo;
+            this.emoji = emoji;
         }
     }
 }

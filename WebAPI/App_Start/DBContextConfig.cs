@@ -19,13 +19,15 @@ namespace WebAPI.App_Start
 
             WarPlannerContext context = new(optionsBuilder.Options);
 
-            if (!context.Database.CanConnect()) throw new Exception("Cannot connect to database");
+            if (!context.Database.CanConnect()) throw new Exception("Cannot connect to database, please create it first");
 
             services.AddDbContext<WarPlannerContext>(options =>
             {
                 if (env.IsDevelopment()) options.UseSqlServer(configuration.GetConnectionString("DevConnection"));
                 else if (env.IsProduction()) options.UseSqlServer(configuration.GetConnectionString("ProdConnection"));
             });
+
+            context.Database.Migrate();
         }
     }
 }

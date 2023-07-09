@@ -1,41 +1,39 @@
-﻿using System.Text.Json.Serialization;
+﻿using ViewModels.Enumerations;
+using TimeZone = ViewModels.Enumerations.TimeZone;
 
 namespace ViewModels
 {
-    public class CalendarViewModel
+    public class TimeZoneViewModel
     {
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
         |*                               FIELDS                              *|
         \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-        private readonly decimal _guildId;
-        private string _id;
-        private decimal? _channelId;
-        private decimal? _messageId;
+        private readonly int _id;
+        private readonly string _nameValue;
+        private readonly string _zoneValue;
 
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
         |*                             PROPERTIES                            *|
         \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-        [JsonIgnore]
-        public decimal GuildId { get => _guildId; }
+        public int Id { get => _id; }
 
-        public string Id { get => _id; set => _id = value; }
+        public string NameValue { get => _nameValue; }
 
-        public decimal? ChannelId { get => _channelId; set => _channelId = value; }
-
-        public decimal? MessageId { get => _messageId; set => _messageId = value; }
+        public string ZoneValue { get => _zoneValue; }
 
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
         |*                            CONSTRUCTORS                           *|
         \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-        public CalendarViewModel(decimal guildId, string id)
+        public TimeZoneViewModel(TimeZone timeZone)
         {
             // Inputs
             {
-                _guildId = guildId;
-                _id = id;
+                _id = (int)timeZone;
+                _nameValue = timeZone.AsAttribute().DisplayName;
+                _zoneValue = timeZone.AsAttribute().Zone;
             }
         }
     }

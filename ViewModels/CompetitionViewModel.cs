@@ -8,29 +8,29 @@ namespace ViewModels
         |*                               FIELDS                              *|
         \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-        private readonly decimal guildId;
-        private readonly decimal id;
-        private decimal resultChannelId;
-        private string name;
-        private string principalClanTag;
-        private string? secondaryClanTag;
+        private readonly decimal _guildId;
+        private readonly decimal _id;
+        private decimal _resultChannelId;
+        private string _name;
+        private string _principalClanTag;
+        private string? _secondaryClanTag;
 
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
         |*                             PROPERTIES                            *|
         \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
         [JsonIgnore]
-        public decimal GuildId { get => guildId; }
+        public decimal GuildId { get => _guildId; }
 
-        public decimal Id { get => id; }
+        public decimal Id { get => _id; }
 
-        public decimal ResultChannelId { get => resultChannelId; set => resultChannelId = value; }
+        public decimal ResultChannelId { get => _resultChannelId; set => _resultChannelId = value; }
 
-        public string Name { get => name; set => name = value; }
+        public string Name { get => _name; set => _name = value; }
 
-        public string PrincipalClanTag { get => principalClanTag; set => principalClanTag = value; }
+        public string PrincipalClanTag { get => _principalClanTag; set => _principalClanTag = value; }
 
-        public string? SecondaryClanTag { get => secondaryClanTag; set => secondaryClanTag = value; }
+        public string? SecondaryClanTag { get => _secondaryClanTag; set => _secondaryClanTag = value; }
 
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
         |*                            CONSTRUCTORS                           *|
@@ -40,11 +40,11 @@ namespace ViewModels
         {
             // Inputs
             {
-                this.guildId = guildId;
-                this.id = id;
-                this.resultChannelId = resultChannelId;
-                this.name = name;
-                this.principalClanTag = principalClanTag;
+                _guildId = guildId;
+                _id = id;
+                _resultChannelId = resultChannelId;
+                _name = name;
+                _principalClanTag = principalClanTag;
             }
         }
     }
